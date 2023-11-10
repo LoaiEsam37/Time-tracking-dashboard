@@ -1,0 +1,182 @@
+.main {
+  @apply flex w-full min-h-screen flex-col items-center justify-center text-white;
+}
+
+.mainContainer {
+  @apply flex justify-center items-center w-full gap-6;
+}
+
+.statsCardsContainer {
+  @apply flex flex-wrap;
+}
+
+.reportNav {
+  @apply bg-[#1d204b] min-w-[200px] h-[380px] rounded-xl flex flex-col;
+}
+
+.reportNav span {
+  @apply block;
+}
+
+.reportNav span:first-of-type {
+  @apply text-[#b2acff] text-xs;
+}
+
+.reportNav .header .name {
+  @apply leading-8 tracking-wide text-[30px] max-w-[150px] font-thin;
+}
+
+.reportNav .header {
+  @apply bg-[#5746ea] rounded-xl w-full h-[65%] pl-6 pt-7;
+}
+
+.icon {
+  background-image: url("../public/image-jeremy.png");
+  @apply bg-no-repeat bg-center bg-contain w-[60px] h-[60px] border-2 border-white rounded-full mb-6;
+}
+
+.reportNav .nav {
+  @apply flex flex-col items-start justify-start gap-2 pl-6 pt-4 text-sm text-[#b2acff];
+}
+
+.reportNav .nav button {
+  @apply cursor-pointer hover:text-white hover:ease-out hover:scale-110 transition-all;
+}
+
+.reportNav .nav button.active {
+  @apply text-white;
+}
+
+.statsCardsContainer {
+  @apply gap-6 flex-wrap max-w-[648px];
+}
+
+.statsCard {
+  @apply w-[200px] h-[178px] rounded-xl relative transition-all cursor-pointer overflow-hidden;
+}
+
+.statsCard:nth-child(1) {
+  @apply bg-[#ff8b64];
+}
+
+.statsCard:nth-child(2) {
+  @apply bg-[#56c2e6];
+}
+
+.statsCard:nth-child(3) {
+  @apply bg-[#ff5e7d];
+}
+
+.statsCard:nth-child(4) {
+  @apply bg-[#4bcf83];
+}
+
+.statsCard:nth-child(5) {
+  @apply bg-[#7235d1];
+}
+
+.statsCard:nth-child(6) {
+  @apply bg-[#f1c75b];
+}
+
+.statsCard .container {
+  @apply bg-[#1d204b] h-[80%] absolute bottom-0 w-full rounded-xl pt-5 px-6;
+}
+
+.statsCard .row {
+  @apply flex justify-between text-sm;
+}
+
+.statsCard .menuToggler {
+  @apply flex justify-between items-center w-4 cursor-pointer;
+}
+
+.statsCard .menuToggler span {
+  @apply w-1 h-1 bg-[#c2c5fa] rounded-full;
+}
+
+.statsCard .menuToggler:hover span {
+  @apply bg-white ease-in transition-all scale-110;
+}
+
+.statsCard:hover .container {
+  @apply bg-[#34397b] transition-all;
+}
+
+.statsCard:hover {
+  @apply scale-105 duration-200 ease-linear;
+}
+
+.statsCard .timeframe {
+  @apply text-[40px] font-thin mt-2;
+}
+
+.statsCard .previousTimeframe {
+  @apply text-[#b2acff] text-xs;
+}
+
+.statsCard .timeframeContainer {
+  @apply flex flex-col leading-[55px];
+}
+
+.statsCard::before {
+  content: "";
+  @apply top-[-10px] right-4 w-[60px] h-[60px] bg-no-repeat bg-center bg-contain absolute;
+}
+
+.statsCard:nth-child(1)::before {
+  background-image: url("../public/icon-work.svg");
+}
+
+.statsCard:nth-child(2)::before {
+  background-image: url("../public/icon-play.svg");
+}
+
+.statsCard:nth-child(3)::before {
+  background-image: url("../public/icon-study.svg");
+}
+
+.statsCard:nth-child(4)::before {
+  background-image: url("../public/icon-exercise.svg");
+}
+
+.statsCard:nth-child(5)::before {
+  background-image: url("../public/icon-social.svg");
+}
+
+.statsCard:nth-child(6)::before {
+  background-image: url("../public/icon-self-care.svg");
+}
+
+@media (max-width: 900px) {
+  .mainContainer {
+    @apply flex-col my-16;
+  }
+  .statsCardsContainer {
+    @apply flex-col;
+  }
+  .reportNav .nav {
+    @apply flex-row justify-around pl-0;
+  }
+  .reportNav {
+    @apply h-[180px] w-[300px];
+  }
+  .statsCard {
+    @apply w-[300px] h-[150px];
+  }
+  .reportNav .header {
+    @apply flex gap-5 p-0 justify-center items-center;
+  }
+  .reportNav .header div:last-of-type {
+    @apply mb-5;
+  }
+  .reportNav .header .name {
+    @apply text-xl;
+  }
+  .statsCardsContainer .timeframeContainer {
+    @apply flex-row justify-between items-center;
+  }
+  .statsCardsContainer .timeframeContainer .timeframe {
+    @apply text-3xl;
+  }
+}
